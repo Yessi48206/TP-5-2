@@ -83,19 +83,35 @@ class Persona{
     }
 
 }
-let dni= Math.floor(Math.random()*(99999999-10000000)+10000000);
+/*let dni= Math.floor(Math.random()*(99999999-10000000)+10000000);
 let sexo = parseInt(prompt("ingrese su sexo 1-femenino 2-masculino"));
 if(sexo===1){
     sexo="femenino";
 }else if(sexo===2){
 sexo="masculino";
+}*/
+
+
+
+let nombre= document.getElementById("Nombreusuario");
+let peso= document.getElementById("pesoUsuario");
+let AñoNacimiento= document.getElementById("AñoUsuario");
+let Altura= document.getElementById("alturaUsuario");
+
+let boton= document.getElementById("Formulario");
+
+function Formulario (){
+    let boton= document.getElementById("Formulario");
+    // para que se genere una sola ves el numero
+boton.disabled= true;
+
+//resetear el formulario
+//boton.reset();
+
 }
 
-let PersonaNuevo = new Persona("Yessica", sexo,58,156,1948,dni);
 
-PersonaNuevo.mostarGeneracion();
-document.write("<hr>");
-PersonaNuevo.MayorEdad();
-document.write("<hr>");
+let PersonaNuevo = new Persona(nombre,"femenino",peso,Altura,AñoNacimiento,"42356236");
+console.log(PersonaNuevo);
 
-PersonaNuevo.MostraDato();
+boton.MostraDato();
